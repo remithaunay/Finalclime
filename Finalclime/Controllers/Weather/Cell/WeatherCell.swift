@@ -85,6 +85,6 @@ final class WeatherCell: UICollectionViewCell {
 
         nameLabel.text = weather.name
         temperatureLabel.text = weather.formattedTemperature
-        windLabel.text = "\(Int(weather.windSpeed * 3.6)) km/h"
+        windLabel.text = "\(Int(weather.wind.speed * 3.6)) km/h"
     }
 }

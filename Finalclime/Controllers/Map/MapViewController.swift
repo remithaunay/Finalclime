@@ -57,7 +57,7 @@ final class MapViewController: ViewController<MapViewModel>, MKMapViewDelegate {
 
     // MARK: Internal methods
 
-    func dismissMap() {
+    @objc func dismissMap() {
         self.dismiss(animated: true, completion: nil)
     }
 

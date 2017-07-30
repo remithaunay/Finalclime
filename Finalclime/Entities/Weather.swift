@@ -7,37 +7,36 @@
 //
 
 import Foundation
-import Decodable
 
 protocol Temperatured {
-    var temperature: Double { get }
+    var main: WeatherMain { get }
     var formattedTemperature: String { get }
 }
 
 extension Temperatured {
     var formattedTemperature: String {
-        return String(format: "temperature.format".localized, Int(temperature))
+        return String(format: "temperature.format".localized, Int(main.temperature))
     }
 }
 
-struct Weather: WeatherConditioned, Temperatured {
+struct Weather: WeatherConditioned, Temperatured, Decodable {
     let id: Int
     let name: String
-    let latitude: Double
-    let longitude: Double
-    let temperature: Double
-    let windSpeed: Double
+    let coordinates: Coordinates
+    let main: WeatherMain
+    let wind: WeatherWind
     let weatherConditions: [WeatherCondition]
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case coordinates = "coord"
+        case main
+        case wind
+        case weatherConditions = "weather"
+    }
 }
 
-extension Weather: Decodable {
-    static func decode(_ j: Any) throws -> Weather {
-        return try Weather(id: j => "id",
-                        name: j => "name",
-                        latitude: j => ["coord", "lat"],
-                        longitude: j => ["coord", "lon"],
-                        temperature: j => ["main", "temp"],
-                        windSpeed: j => ["wind", "speed"],
-                        weatherConditions: j => "weather")
-    }
+struct WeatherWind: Decodable {
+    let speed: Double
 }

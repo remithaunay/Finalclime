@@ -7,28 +7,30 @@
 //
 
 import Foundation
-import Decodable
 
 struct Forecast {
     let data: [ForecastData]
-}
 
-extension Forecast: Decodable {
-    static func decode(_ j: Any) throws -> Forecast {
-        return try Forecast(data: j => "list")
+    enum CodingKeys: String, CodingKey {
+        case date = "list"
     }
 }
 
-struct ForecastData: WeatherConditioned, Temperatured {
-    let timestamp: Double
-    let temperature: Double
-    let weatherConditions: [WeatherCondition]
+extension Forecast: Decodable {
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        data = try values.decode([ForecastData].self, forKey: .date)
+    }
 }
 
-extension ForecastData: Decodable {
-    static func decode(_ j: Any) throws -> ForecastData {
-        return try ForecastData(timestamp: j => "dt",
-                                temperature: j => ["main", "temp"],
-                                weatherConditions: j => "weather")
+struct ForecastData: WeatherConditioned, Temperatured, Decodable {
+    let timestamp: Double
+    let main: WeatherMain
+    let weatherConditions: [WeatherCondition]
+
+    enum CodingKeys: String, CodingKey {
+        case timestamp = "dt"
+        case main = "main"
+        case weatherConditions = "weather"
     }
 }

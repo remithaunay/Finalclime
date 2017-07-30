@@ -8,7 +8,6 @@
 
 import Foundation
 import RxSwift
-import Decodable
 
 class MockService {
 
@@ -18,8 +17,7 @@ class MockService {
             if let path = Bundle.main.path(forResource: fileName, ofType: "json") {
                 do {
                     let data = try NSData(contentsOfFile: path, options: .mappedIfSafe)
-                    let JSON = try JSONSerialization.jsonObject(with: data as Data, options: .allowFragments)
-                    let value: T = try T.decode(JSON)
+                    let value: T = try JSONDecoder().decode(T.self, from: data as Data)
                     observer.onNext(value)
                 } catch {
                     observer.onError(error)

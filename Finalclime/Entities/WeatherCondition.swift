@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Decodable
 
 protocol WeatherConditioned {
     var weatherConditions: [WeatherCondition] { get }
@@ -23,12 +22,6 @@ extension WeatherConditioned {
     }
 }
 
-struct WeatherCondition {
+struct WeatherCondition: Decodable {
     let icon: String
-}
-
-extension WeatherCondition: Decodable {
-    static func decode(_ j: Any) throws -> WeatherCondition {
-        return try WeatherCondition(icon: j => "icon")
-    }
 }

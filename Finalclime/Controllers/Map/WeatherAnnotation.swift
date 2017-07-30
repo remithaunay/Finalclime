@@ -18,7 +18,7 @@ final class WeatherAnnotation: NSObject, MKAnnotation {
     init(_ weather: Weather) {
         self.title = weather.name
         self.subtitle = weather.formattedTemperature
-        self.coordinate = CLLocationCoordinate2D(latitude: weather.latitude, longitude: weather.longitude)
+        self.coordinate = CLLocationCoordinate2D(latitude: weather.coordinates.latitude, longitude: weather.coordinates.longitude)
         self.iconName = weather.iconName
     }
 }

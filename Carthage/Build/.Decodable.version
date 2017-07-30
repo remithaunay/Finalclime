@@ -1,0 +1,27 @@
+{
+  "iOS" : [
+    {
+      "hash" : "8e9cbf74fc32589c9467316ab489caa2b26a44c28f8e5302bf1a6a3508daf7e5",
+      "name" : "Decodable"
+    }
+  ],
+  "commitish" : "v0.5.1",
+  "watchOS" : [
+    {
+      "hash" : "0d07b4567d6d01291c717a348899126de28b122e4e78dfb85d1b5e4464134e2e",
+      "name" : "Decodable"
+    }
+  ],
+  "tvOS" : [
+    {
+      "hash" : "f741c358cd0db91d7923f414cc184b63e344cd7cf7adcbfa4138c45725a33e07",
+      "name" : "Decodable"
+    }
+  ],
+  "Mac" : [
+    {
+      "hash" : "26da0fd8023d08df2d682e77d74c56a7a2f041d783f04f209916ff4b3f0b985f",
+      "name" : "Decodable"
+    }
+  ]
+}

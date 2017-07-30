@@ -8,7 +8,6 @@
 
 import Foundation
 import Alamofire
-import Decodable
 import RxSwift
 
 class WebService {
@@ -27,16 +26,16 @@ class WebService {
     func call<T: Decodable>(method: HTTPMethod = .get, parameters: [String: Any]? = nil) -> Observable<T> {
         return Observable.create { observer in
 
-            Alamofire.request("\(self.baseURL)\(self.path)", method: method, parameters: parameters).responseJSON { response in
+            Alamofire.request("\(self.baseURL)\(self.path)", method: method, parameters: parameters).responseData { response in
 
-                guard let JSON = response.result.value else {
+                guard let data = response.result.value else {
                     observer.onError(response.error!)
                     observer.onCompleted()
                     return
                 }
 
                 do {
-                    let value: T = try T.decode(JSON)
+                    let value: T = try JSONDecoder().decode(T.self, from: data)
                     observer.onNext(value)
                 } catch {
                     observer.onError(error)

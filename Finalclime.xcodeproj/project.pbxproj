@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		572EB5921F2B803900692240 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572EB5911F2B803900692240 /* Alamofire.framework */; };
-		572EB5941F2B803D00692240 /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572EB5931F2B803D00692240 /* Decodable.framework */; };
 		572EB5961F2B804200692240 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572EB5951F2B804200692240 /* RxSwift.framework */; };
 		572EB5981F2B804500692240 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572EB5971F2B804500692240 /* Swinject.framework */; };
 		575E59551F2DF27000522863 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575E590E1F2DF26F00522863 /* Assets.xcassets */; };
@@ -60,7 +59,22 @@
 		575E59A31F2DF2F400522863 /* WeatherServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E59971F2DF2F400522863 /* WeatherServicing.swift */; };
 		575E59A61F2DF39400522863 /* WeatherWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E59A41F2DF39400522863 /* WeatherWebService.swift */; };
 		575E59A71F2DF39400522863 /* WeatherMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E59A51F2DF39400522863 /* WeatherMockService.swift */; };
+		57A1079F1F2E103B00066FB6 /* WeatherMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A1079E1F2E103B00066FB6 /* WeatherMain.swift */; };
+		57A107A11F2E10BE00066FB6 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A107A01F2E10BE00066FB6 /* Coordinates.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		57A1079A1F2E079600066FB6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		572EB5911F2B803900692240 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -117,7 +131,10 @@
 		575E59971F2DF2F400522863 /* WeatherServicing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherServicing.swift; sourceTree = "<group>"; };
 		575E59A41F2DF39400522863 /* WeatherWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherWebService.swift; sourceTree = "<group>"; };
 		575E59A51F2DF39400522863 /* WeatherMockService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherMockService.swift; sourceTree = "<group>"; };
+		57A1079E1F2E103B00066FB6 /* WeatherMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMain.swift; sourceTree = "<group>"; };
+		57A107A01F2E10BE00066FB6 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		57AC9D971F2B2A8700511340 /* Finalclime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finalclime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57B3DF451F2E182A000B5A25 /* Finalclime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Finalclime.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +143,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				572EB5921F2B803900692240 /* Alamofire.framework in Frameworks */,
-				572EB5941F2B803D00692240 /* Decodable.framework in Frameworks */,
 				572EB5961F2B804200692240 /* RxSwift.framework in Frameworks */,
 				572EB5981F2B804500692240 /* Swinject.framework in Frameworks */,
 			);
@@ -275,6 +291,8 @@
 				575E59521F2DF27000522863 /* Forecast.swift */,
 				575E59531F2DF27000522863 /* Weather.swift */,
 				575E59541F2DF27000522863 /* WeatherCondition.swift */,
+				57A1079E1F2E103B00066FB6 /* WeatherMain.swift */,
+				57A107A01F2E10BE00066FB6 /* Coordinates.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -352,6 +370,7 @@
 		57AC9D991F2B2A8700511340 /* Finalclime */ = {
 			isa = PBXGroup;
 			children = (
+				57B3DF451F2E182A000B5A25 /* Finalclime.entitlements */,
 				575E59371F2DF27000522863 /* AppDelegate.swift */,
 				575E591D1F2DF27000522863 /* Controllers */,
 				575E59161F2DF27000522863 /* Components */,
@@ -376,6 +395,7 @@
 				57AC9D951F2B2A8700511340 /* Resources */,
 				572EB59C1F2B84F200692240 /* Carthage Copy */,
 				575E590C1F2DEE6D00522863 /* Swiftlint */,
+				57A1079A1F2E079600066FB6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -392,15 +412,20 @@
 		57AC9D8F1F2B2A8700511340 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Rémi Thaunay";
 				TargetAttributes = {
 					57AC9D961F2B2A8700511340 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = FNAZV2ATC8;
+						DevelopmentTeam = SMUWMB7L2Z;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -448,7 +473,6 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Decodable.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
@@ -484,6 +508,7 @@
 				575E59801F2DF27000522863 /* EnvironmentAssembly.swift in Sources */,
 				575E59711F2DF27000522863 /* AppDelegate.swift in Sources */,
 				575E59631F2DF27000522863 /* ForecastCell.swift in Sources */,
+				57A1079F1F2E103B00066FB6 /* WeatherMain.swift in Sources */,
 				575E59841F2DF27000522863 /* Forecast.swift in Sources */,
 				575E596F1F2DF27000522863 /* WeatherViewController.swift in Sources */,
 				575E599F1F2DF2F400522863 /* ForecastWebService.swift in Sources */,
@@ -510,6 +535,7 @@
 				575E59671F2DF27000522863 /* ForecastViewModel.swift in Sources */,
 				575E599D1F2DF2F400522863 /* ForecastMockService.swift in Sources */,
 				575E59691F2DF27000522863 /* MapViewModel.swift in Sources */,
+				57A107A11F2E10BE00066FB6 /* Coordinates.swift in Sources */,
 				575E59A01F2DF2F400522863 /* StoringLocalService.swift in Sources */,
 				575E59981F2DF2F400522863 /* LocalService.swift in Sources */,
 				575E59831F2DF27000522863 /* WeatherAssembly.swift in Sources */,
@@ -565,7 +591,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -573,7 +601,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -616,7 +648,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -624,7 +658,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -653,37 +691,49 @@
 		57AC9DAA1F2B2A8700511340 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = FNAZV2ATC8;
+				CODE_SIGN_ENTITLEMENTS = Finalclime/Finalclime.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SMUWMB7L2Z;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Finalclime/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = remithaunay.Finalclime;
+				PRODUCT_BUNDLE_IDENTIFIER = remithaunay.app.Finalclime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		57AC9DAB1F2B2A8700511340 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = FNAZV2ATC8;
+				CODE_SIGN_ENTITLEMENTS = Finalclime/Finalclime.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SMUWMB7L2Z;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Finalclime/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = remithaunay.Finalclime;
+				PRODUCT_BUNDLE_IDENTIFIER = remithaunay.app.Finalclime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
