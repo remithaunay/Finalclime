@@ -1,0 +1,9 @@
+.DS_Store
+xcuserdata/
+*.orig
+
+*.bcsymbolmap
+Carthage/Checkouts
+Carthage/Build/Mac/
+Carthage/Build/watchOS/
+Carthage/Build/tvOS/

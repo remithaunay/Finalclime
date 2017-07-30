@@ -1,0 +1,4 @@
+github "Alamofire/Alamofire" ~> 4.4
+github "Anviking/Decodable" ~> 0.5
+github "ReactiveX/RxSwift" ~> 3.0
+github "Swinject/Swinject" ~> 2.0

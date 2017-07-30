@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  Finalclime
+
+  Created by Rémi Thaunay on 29/07/2017.
+  Copyright © 2017 Rémi Thaunay. All rights reserved.
+*/
+
+//Common
+"common.ok" = "Ok";
+"common.cancel" = "Cancel";
+
+//Environment
+"environment.mock.button" = "Mock";
+"environment.web.button" = "Web";
+
+//Weather
+"weather.add.button" = "Add";
+"weather.map.button" = "Map";
+
+"weather.add.alert.title" = "Add location";
+"weather.add.alert.message" = "enter the name of the city";
+"weather.add.alert.placeholder" = "City name";
+
+//Map
+"map.title" = "Map";
+
+//Forecast
+"forecast.title" = "Forecast";
+
+//Model
+"temperature.format" = "%i°C";

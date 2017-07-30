@@ -1,0 +1,19 @@
+#For more information https://github.com/realm/SwiftLint/blob/master/README.md
+# To validate .swiftlint.yml file http://www.yamllint.com
+type_name:
+    min_length: 1
+    max_length:
+        warning: 100
+        error: 120
+disabled_rules: # rule identifiers to exclude from running
+   - line_length
+   - variable_name
+#  - variable_name_min_length
+   - force_cast
+   - cyclomatic_complexity
+   - valid_docs
+   - function_parameter_count
+   - type_body_length
+   - file_length
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+   - Carthage
